@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "airbnb-investment",
+    "title": "Airbnb Business",
+    "budget": "₹2L Start",
+    "category": "Real Estate",
+    "status": "Executing",
+    "description": "Building a high-cashflow short-term rental empire with low overhead.",
+    "steps": [
+      { "id": 1, "title": "Sourcing", "desc": "Identify owners open to sub-letting.", "icon": "home" },
+      { "id": 2, "title": "Glow-Up", "desc": "Luxury interior design setup.", "icon": "sparkles" },
+      { "id": 3, "title": "Listing", "desc": "Launch on Airbnb & Instagram.", "icon": "rocket" }
+    ]
+  }
+]
