@@ -1,5 +1,16 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/dmiraluxe/practicabusinessideas/main/ceo_avatar.png" width="100%" style="border-radius: 20px; box-shadow: 0px 10px 30px rgba(212, 175, 55, 0.3);" />
+
+<br>
+
+# ⚜️ THE DMIRALUXE MANIFESTO
+> *“Building ₹1.2 Crore Real Estate Assets with Strategic Discipline.”*
+
+---
+</div>
+<div align="center">
+
 # 💎 DIVABIZ: Empire Command Center
 ### "BUILDING EMPIRES FROM IDEAS TO GLOBAL INFLUENCE"
 
