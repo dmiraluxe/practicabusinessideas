@@ -1,1 +1,1 @@
-# DIVABIZ
+# practicalbusinessideas
