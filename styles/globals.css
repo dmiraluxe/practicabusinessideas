@@ -1,44 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 5, 5, 5;
-  --background-end-rgb: 0, 0, 0;
+  --gold-primary: #D4AF37;
+  --gold-glow: rgba(212, 175, 55, 0.5);
+  --luxury-black: #050505;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  overflow-x: hidden;
+  background: var(--luxury-black);
+  color: white;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
-/* Luxury Scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: #050505;
-}
-::-webkit-scrollbar-thumb {
-  background: #D4AF37;
-  border-radius: 10px;
+.gold-text {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Custom Text Glow for Gold */
-.text-gold-glow {
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+.luxury-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Particle Background Layer */
-.bg-particles {
-  background-image: radial-gradient(circle, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
-  background-size: 30px 30px;
+.luxury-card:hover {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 30px var(--gold-glow);
+  transform: translateY(-10px);
+}
+
+.ceo-glow {
+  filter: drop-shadow(0 0 20px var(--gold-glow));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
