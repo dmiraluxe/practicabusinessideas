@@ -460,5 +460,41 @@ function updateUI() {
     setTimeout(() => rmAvatar.style.transform = "scale(1) rotate(0deg)", 300);
 }
 </script>
+    <div id="aiChatTrigger" class="fixed bottom-8 right-8 z-50 cursor-pointer group" onclick="toggleChat()">
+    <div class="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-transform group-hover:scale-110">
+        <span class="text-3xl">💬</span>
+    </div>
+</div>
+
+<div id="aiChatWindow" class="hidden fixed bottom-28 right-8 w-80 h-96 bg-black border border-gold-500/30 rounded-[30px] z-50 p-6 flex flex-col shadow-2xl">
+    <div class="flex justify-between items-center mb-4 border-b border-white/10 pb-4">
+        <h4 class="text-xs font-black uppercase text-gold-500">AI STRATEGY CONSULTANT</h4>
+        <button onclick="toggleChat()" class="text-white/50 hover:text-white">✕</button>
+    </div>
+    <div id="chatContent" class="flex-grow overflow-y-auto text-[11px] text-gray-300 space-y-4">
+        <p>I'm your DIVEXA strategy partner. How can I help you scale today?</p>
+    </div>
+    <input type="text" id="chatInput" placeholder="Ask about scaling..." class="w-full mt-4 bg-white/5 border border-white/10 rounded-xl p-3 text-[10px] text-white">
+</div>
+
+<script>
+    function toggleChat() {
+        const win = document.getElementById('aiChatWindow');
+        win.classList.toggle('hidden');
+    }
+
+    document.getElementById('chatInput').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            const chat = document.getElementById('chatContent');
+            const msg = this.value;
+            chat.innerHTML += `<p class="text-right text-gold-500">You: ${msg}</p>`;
+            // Placeholder logic for future AI integration (e.g., API call)
+            setTimeout(() => {
+                chat.innerHTML += `<p>Consultant: Analyzing strategy for ${msg} in Thane/Kalyan market...</p>`;
+            }, 800);
+            this.value = '';
+        }
+    });
+</script>
 </body>
 </html>
